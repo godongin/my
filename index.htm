@@ -1,5 +1,36 @@
-<html>
-  <body>
-    hellow world
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 화면 사이트</title>
+    <style>
+        /* 1. 브라우저 및 본문의 기본 여백을 모두 제거합니다. */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* 스크롤바가 이중으로 생기는 것을 방지 */
+        }
+
+        /* 2. 아이프레임이 화면 전체를 차지하도록 설정합니다. */
+        .fullscreen-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* 테두리 제거 */
+        }
+    </style>
+</head>
+<body>
+
+    <iframe src="http://dongin.iptime.org:7777" 
+            class="fullscreen-iframe"
+            allow="fullscreen">
+    </iframe>
+
+</body>
 </html>
